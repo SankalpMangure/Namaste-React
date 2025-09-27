@@ -1,0 +1,64 @@
+1. what is the bundler => ex.web - pack, parcel, vitenpm this are bulders, it bundle the app
+2. npm intall -D "pkgnm" => -D will install dev dependencies
+3. in package version  ^=> update version automatically ~ => install major version
+4. transitive dependencies => we need dependencies as package, then this package need own dependencies, agin that own package need 
+    own dependencies told as, every package has their own package.json contain their dependencies and so on
+5. npx is used to execute any package => like we used npx parcel index.html which created server for us
+6. <script type="module" src="./App.js"></script> in this line type=module shows the module file if not given it treat as normal 
+   javascript file
+
+7. JSX???? => JSX is HTML like syntax
+8. react element mnje => JSX mnje => function which return JSX mnje => functional component
+9. component composition => calling one component into another component
+
+10. props => passing argumants to function => syntax like attrinutes to html element
+11. what is config driven UI => Delhi, Mumbai, banglore, Dehradun => app can work in different countries, states etc. ect.
+12. UI layer and Data layer => react comes into picture => it update DOM manupilation => virtual DOM
+
+13. what r Hooks => the normal JS function given by react
+14. virtual DOM (which used in react) is representaion of actual DOM
+
+15. mounting => updating=> unmounting   ... main 3 phases
+    
+    constructor call
+    render method (which actually load HTML)
+    component did mount (we can call api here)
+    agin render (this will render updated API data)
+    component did update (this called)
+    component will unmount (after goes to another component)
+
+
+16. single responsibility principle => code can be testable, maintainable, reuseable
+17. Chunking/ Code spliting/ Dynamic bundling/ Lazy loading => add component to lazy(component path) => in element wrap it into 
+    suspence and give fallback
+    const grocary = lazy(()=>import(./component/grocary))
+    {path="/grocary" element=<suspence fallback={<h1>Loading...</h1>}><Grocery></suspence>}
+
+18. HOC => component which take another component as parameter and return new component called as 
+    => this are pure finctions/component 
+    => pure function/component bcoz...  it only take component and use it. it will not change anything in taken component
+
+19. controlled & uncontrolled components => suppose your 1st_component is passing prop to 2nd_component and that 2nd_component 
+    is using that prop and doing something then 1st_component is controlling to 2nd_component ie. 2nd_component is controlled component coz parent is controlling chid component
+
+    and vice varsa => if 2nd_component component doing selfly something than that is uncontrolled component coz it doing self not depend on any one 
+
+20. props drilling => avoid => context API
+    just use createContext from react and export it
+    and use it as useContext and pass context name from import
+    <userContext.provider value={obj which u want to update}>wrap components in which u want this global/static info</>
+
+21. redux => redux is the store/central store and you can acces data anywhere inside our app from redux
+    redux => external library
+    context API => provided by react 
+    redux thunk => same as redux but gives you middleware advantage
+
+22. useState() → Manage component state in functional components.
+
+    useEffect() → Handle side effects (like fetching data, DOM updates, or subscriptions).
+
+    useContext() → Share data across components without prop drilling.
+
+    useRef() → Access DOM elements directly and persist values across renders.
+
+    useReducer() → Manage complex state logic in a structured way.

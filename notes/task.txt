@@ -1,0 +1,10 @@
+parcel
+difference between git and github and gitlab
+what is 'jest'
+named and default export 
+react fiber === rect reconsilaction
+incremantal rendering
+diff algorithm
+scss/sass/styles component, 
+matrical UI, antui, bootstrap, chakra UI
+
